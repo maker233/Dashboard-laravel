@@ -1,0 +1,32 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+
+skip_files:
+  - .env
+
+beta_settings:
+   # for Cloud SQL, set this value to the Cloud SQL connection name,
+   # e.g. "project:region:cloudsql-instance"
+   cloud_sql_instances: zeta-envoy-241514:europe-west1:laraveldashboard
+
+env_variables:
+  # Put production environment variables here.
+  
+  APP_LOG: errorlog
+  APP_KEY: base64:n3E3F4rnKiwbFsifoZA/FqNgjAe7hrx3gTN8LVb44yw=
+  DB_CONNECTION: mysql
+  DB_HOST: 34.76.14.35
+  DB_PORT: 3306
+  DB_DATABASE: laraveldashboarding
+  DB_USERNAME: root
+  DB_PASSWORD: zlO1fDjvmC31LD6i
+  APP_NAME: Laravel
+  APP_ENV: local
+  APP_DEBUG: true
+  APP_URL: https://zeta-envoy-241514.appspot.com
+  DB_SOCKET: "/cloudsql/zeta-envoy-241514:europe-west1:laraveldashboard"
